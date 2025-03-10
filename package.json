@@ -1,0 +1,26 @@
+{
+  "name": "module17challenge",
+  "version": "1.0.0",
+  "description": "Social Network API FSM",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "seed": "npm run build && node dists/seeds/index.js",
+    "start": "npm run build && node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.96",
+    "typescript": "^5.8.2"
+  }
+}
