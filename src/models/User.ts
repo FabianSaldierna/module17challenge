@@ -11,13 +11,13 @@ interface IUser extends Document {
 const userSchema = new Schema<IUser>(
     {
         username: {
-            String,
+            type: String,
             unique: true,
             required: true,
             trim: true,
         },
         email: {
-            String,
+            type: String,
             unique: true,
             required: true,
             //TODO: check for valid mail
@@ -25,13 +25,13 @@ const userSchema = new Schema<IUser>(
         thoughts: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Thought',
+                ref: 'thought',
             },
         ],
         friends: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'User',
+                ref: 'user',
             },
         ],
     },
